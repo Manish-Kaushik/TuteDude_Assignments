@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OmniFood responsive food delivery landing page demo">
+  <title>OmniFood — Healthy meals delivered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="OmniFood home">
+        <img src="assets/logo.svg" alt="OmniFood logo">
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#cities">FOOD DELIVERY</a>
+        <a href="#how-it-works">HOW IT WORKS</a>
+        <a href="#cities">OUR CITIES</a>
+        <a href="#pricing">SIGN-UP</a>
+      </div>
+    </nav>
+    <div class="hero-content container">
+      <div class="hero-copy">
+        <h1>GOODBYE JUNK FOOD.<br><span>HELLO SUPER HEALTHY FOOD.</span></h1>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#pricing">I'm Hungry</a>
+          <a class="btn btn-outline" href="#how-it-works">Show me more</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section how" id="how-it-works">
+      <div class="container">
+        <div class="section-heading">
+          <h2>HOW IT WORKS — SIMPLE AS 1, 2, 3</h2>
+          <div class="gold-line"></div>
+        </div>
+        <div class="how-grid">
+          <div class="phone-wrap">
+            <img src="assets/phone.svg" alt="OmniFood app shown on a phone">
+          </div>
+          <div class="steps">
+            <article class="step"><span>1</span><p>Choose the plan that fits best for your need and sign-up today</p></article>
+            <article class="step"><span>2</span><p>Pay for the plan and download the app</p></article>
+            <article class="step"><span>3</span><p>You are done, start ordering!!</p></article>
+            <div class="store-buttons">
+              <a href="#" class="store"><img src="assets/google-play.svg" alt="Get it on Google Play"></a>
+              <a href="#" class="store"><img src="assets/app-store.svg" alt="Download on the App Store"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cities" id="cities">
+      <div class="container">
+        <div class="section-heading">
+          <h2>WE'RE CURRENTLY IN THESE CITIES</h2>
+          <div class="gold-line"></div>
+        </div>
+        <div class="city-grid">
+          <article class="city-card"><img src="assets/lisbon.svg" alt="Lisbon illustration"><h3>LISBON</h3><p>◉ 1600+ Happy Eaters</p><p>♟ 50+ Chefs</p><p>♥ @omnifood_lis</p></article>
+          <article class="city-card"><img src="assets/london.svg" alt="London illustration"><h3>LONDON</h3><p>◉ 1600+ Happy Eaters</p><p>♟ 50+ Chefs</p><p>♥ @omnifood_ldn</p></article>
+          <article class="city-card"><img src="assets/berlin.svg" alt="Berlin illustration"><h3>BERLIN</h3><p>◉ 1400+ Happy Eaters</p><p>♟ 70+ Chefs</p><p>♥ @omnifood_ber</p></article>
+          <article class="city-card"><img src="assets/san-francisco.svg" alt="San Francisco illustration"><h3>SAN-FRANCISCO</h3><p>◉ 1800+ Happy Eaters</p><p>♟ 50+ Chefs</p><p>♥ @omnifood_sf</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <div class="testimonial-overlay"></div>
+      <div class="container testimonial-content">
+        <div class="section-heading light">
+          <h2>OUR CUSTOMER CAN'T LIVE WITHOUT US</h2>
+          <div class="gold-line"></div>
+        </div>
+        <div class="quote-grid">
+          <article class="quote"><div class="quote-mark">“</div><p>OmniFood is just awesome! I just launched a startup which leaves me with no time for cooking, so OmniFood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!</p><div class="person"><img src="assets/avatar-1.svg" alt="Alberto Duncan"><span>Alberto Duncan</span></div></article>
+          <article class="quote"><div class="quote-mark">“</div><p>Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to OmniFood. Me and my family are so in love!</p><div class="person"><img src="assets/avatar-2.svg" alt="Joana Silva"><span>Joana Silva</span></div></article>
+          <article class="quote"><div class="quote-mark">“</div><p>I was looking for a quick and easy food delivery service in San Francisco. I tried a lot of them and even found OmniFood. Best food delivery service in the Bay Area. Keep up the great work!</p><div class="person"><img src="assets/avatar-3.svg" alt="Milton Chapman"><span>Milton Chapman</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="section-heading"><h2>START EATING HEALTHY TODAY</h2><div class="gold-line"></div></div>
+        <div class="pricing-grid">
+          <article class="plan"><h3>PREMIUM</h3><div class="price">$399 <small>/ month</small></div><p class="per-meal">That's only 13,905 per meal</p><ul><li>✓ 1 meal everyday</li><li>✓ Order 24*7</li><li>✓ Access to newest creations</li><li>✓ Free delivery</li></ul><a href="#" class="btn btn-primary">Sign up</a></article>
+          <article class="plan"><h3>PRO</h3><div class="price">$199 <small>/ month</small></div><p class="per-meal">That's only 10,905 per meal</p><ul><li>✓ 1 meal in 10</li><li>✓ Order 24*7</li><li>✓ Access to newest creations</li><li>✓ Free delivery</li></ul><a href="#" class="btn btn-outline gold">Sign up</a></article>
+          <article class="plan"><h3>STARTER</h3><div class="price">19$ <small>/ meal</small></div><p class="per-meal">That's only 19$ per meal</p><ul><li>✓ 1 meal month</li><li>✓ Order 24*7</li><li>✕ Access to newest creations</li><li>✕ Free delivery</li></ul><a href="#" class="btn btn-outline gold">Sign up</a></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-links"><a href="#">About us</a><a href="#">Blog</a><a href="#">Press</a><a href="#">iOS App</a><a href="#">Android App</a></div>
+      <div class="socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Twitter">t</a><a href="#" aria-label="Google">G</a><a href="#" aria-label="Instagram">◎</a></div>
+    </div>
+    <p class="copyright">Copyright © 2026 by OmniFood. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

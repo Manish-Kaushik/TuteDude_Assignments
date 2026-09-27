@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #050505;
+  color: #fff;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 45px 25px 70px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  color: #f5f5f5;
+}
+
+header p {
+  margin: 0;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.photo-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.photo-card {
+  min-height: 205px;
+  padding: 12px;
+  border: 1px solid #777;
+  background: #090909;
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-4px);
+  border-color: #9b59ff;
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.photo-card p {
+  margin: 0;
+  color: #ddd;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.message {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #555;
+  background: #111;
+  color: #ddd;
+}
+
+.message.error {
+  border-color: #b33;
+  color: #ff9b9b;
+}
+
+@media (max-width: 800px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+
+  .page {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

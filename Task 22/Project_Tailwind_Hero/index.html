@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project — AI Workspace</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#172033",
+            orange: "#f97316",
+            cream: "#fff8ef"
+          },
+          boxShadow: {
+            soft: "0 18px 45px rgba(23,32,51,.10)"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white text-ink antialiased">
+  <!-- Sticky Navigation -->
+  <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-md">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
+      <a href="#" class="text-lg font-bold tracking-tight">✦ Project</a>
+
+      <div id="desktopNav" class="hidden items-center gap-6 text-sm text-slate-600 md:flex">
+        <a href="#product" class="transition hover:text-slate-950">Product</a>
+        <a href="#solutions" class="transition hover:text-slate-950">Solutions</a>
+        <a href="#resources" class="transition hover:text-slate-950">Resources</a>
+        <a href="#pricing" class="transition hover:text-slate-950">Pricing</a>
+        <a href="#" class="font-semibold text-slate-900">Log in</a>
+        <a href="#cta" class="rounded-md bg-slate-900 px-4 py-2 font-semibold text-white shadow-sm hover:bg-slate-800">Get AI free</a>
+      </div>
+
+      <button id="menuBtn" class="rounded-md border border-slate-200 p-2 md:hidden" aria-label="Open menu">
+        <span class="block h-0.5 w-5 bg-slate-800"></span>
+        <span class="mt-1.5 block h-0.5 w-5 bg-slate-800"></span>
+        <span class="mt-1.5 block h-0.5 w-5 bg-slate-800"></span>
+      </button>
+    </nav>
+
+    <div id="mobileNav" class="hidden border-t border-slate-200 bg-white px-5 pb-5 md:hidden">
+      <div class="flex flex-col gap-3 pt-4 text-sm">
+        <a href="#product">Product</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#resources">Resources</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#">Log in</a>
+        <a href="#cta" class="mt-1 rounded-md bg-slate-900 px-4 py-2 text-center font-semibold text-white">Get AI free</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section id="product" class="relative overflow-hidden bg-gradient-to-b from-orange-50 via-orange-50/60 to-white">
+      <div class="mx-auto max-w-6xl px-5 pb-20 pt-20 text-center lg:px-8 lg:pb-28 lg:pt-24">
+        <div class="mx-auto max-w-3xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-orange-600">AI-powered digital workspace</p>
+          <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+            Write, plan, share.<br>
+            <span class="text-slate-700">With AI at your side.</span>
+          </h1>
+          <p class="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+            It is the connected workspace where better, faster work happens. Bring your docs,
+            projects, notes, and AI tools together in one simple place.
+          </p>
+
+          <!-- Relative container + absolutely positioned accents -->
+          <div id="cta" class="relative mx-auto mt-8 flex max-w-md flex-col items-center justify-center gap-3 sm:flex-row">
+            <span class="absolute -left-2 top-1 hidden h-2 w-2 rounded-full bg-orange-400 sm:block"></span>
+            <a href="#dashboard" class="relative inline-flex w-full items-center justify-center rounded-md bg-slate-950 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-slate-800 sm:w-auto">
+              Get AI free →
+            </a>
+            <a href="#solutions" class="relative inline-flex w-full items-center justify-center rounded-md border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-400 sm:w-auto">
+              Request a demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Dashboard Preview: parent is relative, image is absolute -->
+        <div id="dashboard" class="relative mx-auto mt-16 max-w-4xl">
+          <div class="absolute -inset-6 -z-10 rounded-[2rem] bg-orange-100/70 blur-3xl"></div>
+          <div class="relative mx-auto max-w-3xl overflow-visible">
+            <img src="assets/dashboard.svg"
+                 alt="Project dashboard preview"
+                 class="relative z-10 mx-auto w-full rounded-xl border border-slate-200 bg-white shadow-2xl">
+
+            <!-- Floating information cards -->
+            <div class="absolute -left-2 top-12 z-20 hidden w-44 rounded-lg border border-slate-200 bg-white p-3 text-left shadow-soft sm:block lg:-left-16">
+              <div class="flex items-center gap-2">
+                <span class="grid h-7 w-7 place-items-center rounded-md bg-orange-50 text-sm">📋</span>
+                <div>
+                  <p class="text-xs font-bold text-slate-800">Tasks</p>
+                  <p class="text-[10px] text-slate-500">12 tasks completed today</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute -right-2 top-16 z-20 hidden w-40 rounded-lg border border-slate-200 bg-white p-3 text-left shadow-soft sm:block lg:-right-12">
+              <div class="flex items-center gap-2">
+                <span class="grid h-7 w-7 place-items-center rounded-md bg-emerald-50 text-sm">✓</span>
+                <div>
+                  <p class="text-xs font-bold text-slate-800">Project Status</p>
+                  <p class="text-[10px] font-semibold text-emerald-600">On Track</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute -bottom-8 right-2 z-20 hidden w-48 rounded-lg border border-slate-200 bg-white p-3 text-left shadow-soft sm:block lg:right-8">
+              <p class="text-xs font-bold text-slate-800">Team Activity</p>
+              <div class="mt-2 flex items-center gap-2">
+                <div class="flex -space-x-2">
+                  <img src="assets/avatar-1.svg" class="h-7 w-7 rounded-full border-2 border-white" alt="">
+                  <img src="assets/avatar-2.svg" class="h-7 w-7 rounded-full border-2 border-white" alt="">
+                  <img src="assets/avatar-3.svg" class="h-7 w-7 rounded-full border-2 border-white" alt="">
+                </div>
+                <span class="text-[10px] text-slate-500">+5 online</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Small supporting content to make the landing page feel complete -->
+    <section id="solutions" class="border-t border-slate-100 bg-white py-16">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8">
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="rounded-xl border border-slate-200 p-6">
+            <div class="mb-4 grid h-10 w-10 place-items-center rounded-lg bg-orange-50">✍️</div>
+            <h2 class="font-bold">Write together</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Create focused docs and let AI help turn rough ideas into clear plans.</p>
+          </article>
+          <article class="rounded-xl border border-slate-200 p-6">
+            <div class="mb-4 grid h-10 w-10 place-items-center rounded-lg bg-orange-50">🧠</div>
+            <h2 class="font-bold">Think with AI</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Summarize, brainstorm, and organize work without leaving your workspace.</p>
+          </article>
+          <article class="rounded-xl border border-slate-200 p-6">
+            <div class="mb-4 grid h-10 w-10 place-items-center rounded-lg bg-orange-50">🤝</div>
+            <h2 class="font-bold">Share progress</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Keep your team aligned with projects, status updates, and shared resources.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="bg-slate-50 py-16">
+      <div class="mx-auto max-w-3xl px-5 text-center">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-orange-600">Resources</p>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight">A calmer way to get work done.</h2>
+        <p class="mt-4 text-slate-600">One workspace for planning, documentation, collaboration, and the AI assistance your team needs.</p>
+      </div>
+    </section>
+
+    <section id="pricing" class="py-16">
+      <div class="mx-auto max-w-5xl px-5 text-center lg:px-8">
+        <h2 class="text-3xl font-extrabold">Simple pricing for every team.</h2>
+        <p class="mt-3 text-slate-500">Start free and upgrade when your workflow grows.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Fixed chat widget -->
+  <button aria-label="Open chat" class="fixed bottom-6 right-6 z-50 grid h-12 w-12 place-items-center rounded-full bg-slate-950 text-xl text-white shadow-xl transition hover:scale-105">
+    💬
+  </button>
+
+  <footer class="border-t border-slate-200 py-8">
+    <div class="mx-auto max-w-6xl px-5 text-center text-xs text-slate-500 lg:px-8">
+      © 2026 Project. Built as a Tailwind CSS practice project.
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+
+    menuBtn.addEventListener("click", () => {
+      mobileNav.classList.toggle("hidden");
+    });
+
+    document.querySelectorAll("#mobileNav a").forEach(link => {
+      link.addEventListener("click", () => mobileNav.classList.add("hidden"));
+    });
+  </script>
+</body>
+</html>
