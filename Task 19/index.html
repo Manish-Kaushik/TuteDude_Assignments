@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">Logo</div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#booking">About Us</a>
+        <a href="#booking">Contact Us</a>
+    </nav>
+
+    <div class="user-area">
+        <span id="username">Username</span>
+        <button id="logoutBtn">Logout</button>
+    </div>
+</header>
+
+<main class="main-container">
+
+    <section class="left-section">
+
+        <div class="panel">
+            <h2>Added Items</h2>
+            <div class="table-head">
+                <span>S.No</span>
+                <span>Service Name</span>
+                <span>Price</span>
+                <span></span>
+            </div>
+
+            <div id="cartItems" class="cart-items">
+                <p id="emptyMessage" class="empty-message">No items Added</p>
+            </div>
+
+            <div class="total">
+                <strong>Total Amount</strong>
+                <strong id="totalAmount">₹0.00</strong>
+            </div>
+        </div>
+
+        <div class="panel" id="booking">
+            <h2>Book Now</h2>
+
+            <form id="bookingForm">
+                <label>Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter full name" required>
+
+                <div class="two-fields">
+                    <div>
+                        <label>Email ID</label>
+                        <input type="email" id="email" placeholder="Enter email" required>
+                    </div>
+                    <div>
+                        <label>Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter phone" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="book-btn">Book Now</button>
+            </form>
+        </div>
+
+    </section>
+
+    <section class="right-section" id="services">
+        <div class="panel services-panel">
+            <h2>Browse Our Services</h2>
+            <p class="description">
+                Click on the add button to add the services to your cart or press skip.
+            </p>
+
+            <div id="servicesList" class="services-list"></div>
+
+            <div class="cart-info">
+                <span>Add the items to the cart and book now</span>
+                <button id="addSelectedBtn">Add to Cart</button>
+                <button id="bookSelectedBtn">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

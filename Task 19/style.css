@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f7f9;
+    color: #222;
+}
+
+.navbar {
+    height: 70px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#username {
+    background: #eef5ff;
+    color: #3578d4;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+#logoutBtn {
+    background: #ef476f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 22px;
+}
+
+.left-section,
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.panel {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.panel h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.table-head {
+    display: grid;
+    grid-template-columns: 45px 1fr 80px 30px;
+    gap: 8px;
+    padding: 10px 5px;
+    color: #777;
+    font-size: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-items {
+    min-height: 100px;
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    padding: 35px 10px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 45px 1fr 80px 30px;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 5px;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+
+.remove-btn {
+    border: none;
+    background: transparent;
+    color: #e63946;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #7b2cbf;
+}
+
+.two-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.book-btn,
+#addSelectedBtn,
+#bookSelectedBtn {
+    border: none;
+    color: white;
+    border-radius: 7px;
+    padding: 12px 18px;
+    cursor: pointer;
+}
+
+.book-btn {
+    width: 100%;
+    margin-top: 18px;
+    background: #7b2cbf;
+}
+
+.description {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.services-list {
+    display: grid;
+    gap: 15px;
+}
+
+.service-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 105px 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.service-card img {
+    width: 105px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.service-content h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.price {
+    color: #7b2cbf;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.service-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.add-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.skip-btn {
+    background: #ffe8ef;
+    color: #d6336c;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-info {
+    margin-top: 18px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.cart-info span {
+    flex: 1;
+    color: #666;
+    font-size: 13px;
+}
+
+#addSelectedBtn {
+    background: #7b2cbf;
+}
+
+#bookSelectedBtn {
+    background: #ff8c42;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .two-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        grid-template-columns: 85px 1fr;
+    }
+
+    .service-card img {
+        width: 85px;
+        height: 75px;
+    }
+}

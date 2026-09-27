@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshPress Laundry Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#home" class="logo">FreshPress</a>
+
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <div class="user-name">Username</div>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <p class="small-title">PREMIUM LAUNDRY CARE</p>
+        <h1>Revitalize Your Clothes with <span>Expert Laundry Services!</span></h1>
+        <p>
+            From premium dry cleaning to swift wash and fold, we deliver
+            care and convenience. Schedule a pickup and rediscover the
+            freshness of your clothes today.
+        </p>
+        <button class="primary-btn" id="heroBookBtn">Book a Service Today</button>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=700&q=85"
+             alt="Laundry service">
+    </div>
+</section>
+
+<section class="achievements">
+    <div class="achievement-title">Our Achievements</div>
+    <div><strong>15+</strong><span>Laundry Services</span></div>
+    <div><strong>240+</strong><span>Happy Customers</span></div>
+    <div><strong>2+</strong><span>Years Experience</span></div>
+</section>
+
+<section id="services" class="booking-section">
+    <div class="services-column">
+        <div class="section-heading">
+            <h2>Our Services</h2>
+            <p>Click on the Add Item button to add services to your cart.</p>
+        </div>
+        <div id="servicesList"></div>
+
+        <div class="cart-tip">
+            ⓘ Add the items to the cart and book now.
+        </div>
+    </div>
+
+    <div class="cart-column">
+        <div class="card">
+            <h2>Added Items</h2>
+
+            <div class="cart-header">
+                <span>S.No</span>
+                <span>Service Name</span>
+                <span>Price</span>
+                <span></span>
+            </div>
+
+            <div id="cartItems">
+                <p class="empty-cart">No items Added</p>
+            </div>
+
+            <div class="total-row">
+                <strong>Total Amount</strong>
+                <strong id="totalAmount">₹0.00</strong>
+            </div>
+        </div>
+
+        <div class="card booking-card" id="booking">
+            <h2>Book Now</h2>
+
+            <form id="bookingForm">
+                <label for="fullName">Full Name</label>
+                <input id="fullName" type="text" placeholder="Enter full name" required>
+
+                <div class="form-row">
+                    <div>
+                        <label for="email">Email ID</label>
+                        <input id="email" type="email" placeholder="Enter email" required>
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" type="tel" placeholder="Enter phone number" required>
+                    </div>
+                </div>
+
+                <button class="book-btn" type="submit">Book Now</button>
+            </form>
+
+            <p id="bookingMessage" class="booking-message"></p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="quality-section">
+    <div class="quality-heading">
+        <p class="small-title">WHY CHOOSE US</p>
+        <h2>Quality You Can Count On</h2>
+        <p>
+            We combine premium laundry care, quick support, timely delivery
+            and affordable prices to make laundry simple and reliable.
+        </p>
+    </div>
+
+    <div class="quality-grid">
+        <article>
+            <div class="icon">♨</div>
+            <h3>Premium Services</h3>
+            <p>Professional cleaning and careful handling for your clothes.</p>
+        </article>
+
+        <article>
+            <div class="icon">◉</div>
+            <h3>Quick Support</h3>
+            <p>Our team is ready to help with your laundry requirements.</p>
+        </article>
+
+        <article>
+            <div class="icon">▣</div>
+            <h3>Hassle Free Delivery</h3>
+            <p>Easy pickup and delivery so you can save valuable time.</p>
+        </article>
+
+        <article>
+            <div class="icon">◇</div>
+            <h3>Affordable Prices</h3>
+            <p>Quality laundry services at prices designed for everyday use.</p>
+        </article>
+    </div>
+</section>
+
+<section id="contact" class="newsletter">
+    <div>
+        <h2>Subscribe to our newsletter.</h2>
+        <p>Get updates, offers and laundry tips.</p>
+    </div>
+
+    <form id="newsletterForm">
+        <input id="subscriberName" type="text" placeholder="Full name" required>
+        <input id="subscriberEmail" type="email" placeholder="Email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+</section>
+
+<footer class="footer">
+    <div>
+        <h3>FreshPress</h3>
+        <p>Premium laundry care made simple.</p>
+    </div>
+
+    <div>
+        <h4>Important Links</h4>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+    </div>
+
+    <div>
+        <h4>Contact</h4>
+        <p>hello@freshpress.com</p>
+        <p>+91 12345 67890</p>
+    </div>
+
+    <div>
+        <h4>Follow Us</h4>
+        <div class="socials">
+            <a href="#">f</a>
+            <a href="#">◎</a>
+            <a href="#">in</a>
+            <a href="#">▶</a>
+        </div>
+    </div>
+
+    <p class="copyright">© 2026 FreshPress Laundry Services. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
